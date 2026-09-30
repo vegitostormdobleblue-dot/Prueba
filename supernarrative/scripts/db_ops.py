@@ -49,7 +49,7 @@ def add_character(conn, project_id, data):
 
 def list_characters(conn, project_id):
     rows = conn.execute("""
-        SELECT id, name, role, status, emotional_state, l.name as location
+        SELECT c.id, c.name, c.role, c.status, c.emotional_state, l.name as location
         FROM characters c LEFT JOIN locations l ON c.current_location_id = l.id
         WHERE c.project_id = ?
         ORDER BY CASE c.role WHEN 'protagonist' THEN 1 WHEN 'antagonist' THEN 2 WHEN 'secondary' THEN 3 ELSE 4 END
