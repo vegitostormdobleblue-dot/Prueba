@@ -1,6 +1,6 @@
 # User data - never commit
-source/*
-!source/.gitkeep
+# source/*  (los archivos del fanfic SI se guardan)
+
 # db/*.db  (la base del fanfic SI se guarda en el repo)
 db/*.db-shm
 db/*.db-wal
