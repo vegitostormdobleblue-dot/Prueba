@@ -13,20 +13,23 @@ Narratium es un sistema de memoria narrativa persistente para escritura de ficci
 Si la DB no existe, crearla:
 
 ```bash
-cd /path/to/narratium
-sqlite3 db/narratium.db < db/schema.sql
+cd supernarrative
+python3 -c "import sqlite3; c=sqlite3.connect('db/NOMBRE.db'); c.executescript(open('db/schema.sql').read()); c.commit()"
 ```
+(No hace falta el comando `sqlite3`: Python ya lo trae.)
+
+**En este repo la base canon ya existe: `supernarrative/db/murder-drones.db`. Para un fanfic nuevo se copia esa base a `db/<nombre>.db` (ver CLAUDE.md).**
 
 Si es un proyecto nuevo, inicializar:
 
 ```bash
-python scripts/init_project.py --name "Nombre de la novela" --genre "thriller" --db db/narratium.db
+python scripts/init_project.py --name "Nombre de la novela" --genre "thriller" --db db/murder-drones.db
 ```
 
 Si el usuario ya tiene una novela en progreso (biblia, continuidad, capítulos escritos), importar:
 
 ```bash
-python scripts/import_existing.py --bible archivo_biblia.docx --continuity archivo_continuidad.md --db db/narratium.db
+python scripts/import_existing.py --bible archivo_biblia.docx --continuity archivo_continuidad.md --db db/murder-drones.db
 ```
 
 ---
@@ -37,7 +40,7 @@ python scripts/import_existing.py --bible archivo_biblia.docx --continuity archi
 
 1. **Ejecutar context.py** para obtener el context package:
 ```bash
-python scripts/context.py --chapter N --db db/narratium.db
+python scripts/context.py --chapter N --db db/murder-drones.db
 ```
 Esto genera un informe con:
 - Estado del mundo (ubicaciones de personajes, objetos, fecha/hora en la historia)
@@ -62,7 +65,7 @@ Esto genera un informe con:
 
 5. **Ejecutar analyze.py** para análisis automático:
 ```bash
-python scripts/analyze.py --chapter N --db db/narratium.db --file exports/chapters/capitulo_XX.md
+python scripts/analyze.py --chapter N --db db/murder-drones.db --file exports/chapters/capitulo_XX.md
 ```
 Esto extrae automáticamente:
 - Eventos ocurridos (movimientos, descubrimientos, revelaciones)
@@ -75,12 +78,12 @@ Esto extrae automáticamente:
 
 7. **Ejecutar update.py** para confirmar los cambios:
 ```bash
-python scripts/update.py --chapter N --db db/narratium.db --confirm
+python scripts/update.py --chapter N --db db/murder-drones.db --confirm
 ```
 
 8. **Ejecutar verify.py** para verificación de consistencia:
 ```bash
-python scripts/verify.py --chapter N --db db/narratium.db
+python scripts/verify.py --chapter N --db db/murder-drones.db
 ```
 Reporta:
 - Errores de continuidad física
@@ -94,7 +97,7 @@ Reporta:
 
 9. **Ejecutar dashboard.py** para estado general:
 ```bash
-python scripts/dashboard.py --db db/narratium.db
+python scripts/dashboard.py --db db/murder-drones.db
 ```
 Muestra:
 - Progreso general
