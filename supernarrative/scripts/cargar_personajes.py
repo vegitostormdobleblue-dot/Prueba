@@ -29,7 +29,7 @@ PERSONAJES = [
         "arc_summary": "Canon: enseña la railgun en 3071, se alía con N, mata a J, despierta el Solver, se transforma en el campamento, pierde y recupera a N, se sacrifica en Cabin Fever, derrota a Cyn y se fusiona con el Solver. Novia de N al final.",
         "voice_notes": "Insulto firma: JODETE (Bite me!). Sarcasmo seco, respuestas cortas, grita en mayúscula cuando se emociona con armas o destrucción. Se sonroja y contesta JODETE cuando la pillan sintiendo algo. Risa: hahahaha / HAHAHAHA cuando está maníaca por su arma; heheheh cuando planea algo.",
         "speech_patterns": "-JODETE / -nada que te importe JODETE / -si si como sea / -deja de complicar mi plan genocida / -SOLO DESVASTACION TOTAL / -¿con thad?...heeeh bueno no estarían mal / -NO SOY MENOR SOY SOLO DOS SEGUNDOS MENOR QUE TU",
-        "emotional_state": "Triste por ser ignorada en la colonia; se anima con deuz, thad y su arma.",
+        "emotional_state": "Ignorada en la colonia; se anima con su railgun y con lo que le interesa.",
     },
     {
         "name": "n",
