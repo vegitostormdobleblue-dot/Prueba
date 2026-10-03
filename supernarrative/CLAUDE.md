@@ -14,3 +14,7 @@
 - `db/murder-drones.db` es el CANON LIMPIO: cronología de la serie + personajes canon. No se le agregan OCs ni hechos de fanfic.
 - Cuando el usuario diga "nuevo fanfic: <nombre>", copiar `db/murder-drones.db` a `db/<nombre>.db` y trabajar SOLO sobre esa copia. Los OCs, hechos, capítulos y relaciones del fanfic van ahí.
 - Para recargar el canon: `python3 scripts/cargar_cronologia.py --db db/<x>.db` y `python3 scripts/cargar_personajes.py --db db/<x>.db`.
+
+## neutral frisk
+
+- Cuando el usuario diga "neutral frisk" o "capitulo 2": antes de hacer nada leer `source/neutral-frisk/cronologia.md` (cronologia) y `source/neutral-frisk/feedback.md` (sus reglas). Base del fanfic: `db/neutral-frisk.db`.
